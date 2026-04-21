@@ -1,0 +1,16 @@
+services :
+  mongo :
+    image: mongo:8
+    container_name: mongo-container
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ankit
+      MONGO_INITDB_ROOT_PASSWORD: ankit123
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
+      
